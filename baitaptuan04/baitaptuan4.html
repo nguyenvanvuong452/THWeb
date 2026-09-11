@@ -1,0 +1,73 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+    <style>
+        .Hienthi{
+            display: inline;
+        }
+        .Andi{
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+        Cau 1 :
+    <button id = "btnPurple"> Purple</button>
+     <button id = "btnPink"> Pink</button>
+     <p id = "para">This is para if you think about it.</p>
+
+        Cau 2 :
+    <button id = "Bam de">Bam nut neu ban thich code</button>
+    <span id = "count"></span> 
+
+        Cau 3 :
+    <button id = "Hien thi">Hien thi</button>
+    <button id = "An di">An di</button>
+    <span id = "display">Im here</span>
+
+    <script>
+        //Cau 1
+        var btnPurple = document.getElementById("btnPurple");
+        var btnPink = document.getElementById("btnPink");
+        var para = document.getElementById("para");
+        console.log(para);
+        btnPurple.onclick = ()=>{
+            para.style.backgroundColor = "purple";
+        }
+        btnPink.onclick = ()=>{
+            para.style.backgroundColor = "pink";
+        }
+
+        //Cau 2
+        var Bamde = document.getElementById("Bam de");
+        var count = document.getElementById("count");
+        var dem = 0;
+        Bamde.onclick = ()=>{
+            dem++;
+            count.innerText = dem;
+        }
+
+        //Cau 3
+        var Hienthi = document.getElementById("Hien thi");
+        var Andi = document.getElementById("An di");
+        var display = document.getElementById("display");
+        
+        Hienthi.onclick = ()=>{
+            console.log("show");
+            display.classList.add("Hienthi");
+            display.classList.remove("An di");
+            
+        }
+        Andi.onclick = ()=>{
+            console.log("click");
+            display.classList.add("An di");
+            display.classList.remove("Hienthi");
+
+        }
+
+    </script>
+</body>
+</html>
