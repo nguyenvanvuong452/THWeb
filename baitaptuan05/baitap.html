@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var n = prompt("Nhập số lượng sinh viên: ");
+        document.write("<table border='1' align='center' cellpadding='5'>");
+        document.write("<tr><td colspan='4'>DANH SÁCH SINH VIÊN</td></tr>");
+        document.write("<tr><th>MSSV</th><th>Tên</th><th>Lớp</th><th>Điểm Web</th></tr>");
+        for (var i = 1; i<= n;i++)
+        {
+        var a = prompt("Nhập mssv: " + i);
+        var b = prompt("Nhập tên: " + i);
+        var c = prompt("Nhập lớp: " + i);
+        var d = prompt("Nhập điểm môn Web: " + i);
+             
+              document.write("<tr><td>" + a + "</td><td>" + b + "</td><td>" + c + "</td><td>" + d + "</td></tr>" );
+        }
+
+        document.write("</table>");
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+        var cong = document.createElement("button");
+        cong.textContent = "Cộng";
+        cong.onclick = ()=>{
+             var a = parseInt(prompt("Nhap a: "));
+             var b = parseInt(prompt("Nhap b: "));
+            alert("Ket qua: " + (a + b));
+        }
+        document.body.appendChild(cong);
+
+        var tru = document.createElement("button");
+        tru.textContent = "Trừ";
+        tru.onclick = ()=>{
+             var a = parseInt(prompt("Nhap a: "));
+             var b = parseInt(prompt("Nhap b: "));
+            alert("Ket qua: " + (a - b));
+        }
+        document.body.appendChild(tru);
+
+        var nhan = document.createElement("button");
+        nhan.textContent = "Nhân";      
+        nhan.onclick = ()=>{
+             var a = parseInt(prompt("Nhap a: "));
+             var b = parseInt(prompt("Nhap b: "));
+            alert("Ket qua: " + (a * b));
+        }
+        document.body.appendChild(nhan);
+
+        var chia = document.createElement("button");
+        chia.textContent = "Chia";
+        chia.onclick = ()=>{
+            var a = parseInt(prompt("Nhap a: "));
+            var b = parseInt(prompt("Nhap b: "));
+            alert("Ket qua: " + (a / b));
+        }
+        document.body.appendChild(chia);
+    </script>
+</body>
+</html>
