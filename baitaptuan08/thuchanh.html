@@ -7,21 +7,44 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
-      <html>
-       <h1 id="title">Chào mừng đến Bookstore Online</h1>
-       <div id="book-list">
-        <div class="book"><h3>Đắc Nhân Tâm</h3><p class="price">120.000đ</p></div>
-        <div class="book"><h3>Tư Duy Nhanh và Chậm</h3><p class="price">150.000đ</p></div>
-        <div class="book"><h3>Nhà Giả Kim</h3><p class="price">89.000đ</p></div>
+    <html>
+        <button id="btn-move">Di chuyển</button>
+        <button id="btn-grow">Phóng to rồi thu lại</button>
+        <button id="btn-stop">Dừng</button>
+        <div id="box" style="
+        position: relative;
+        left: 0;
+        width: 100px;
+        height: 100px;
+        background-color: rgb(151, 123, 216);
+        opacity: 1;">
         </div>
     </html>
   <script>
-    $("#title").css("color","purple")               // theo title
-    $("#book-list").css("background", "#c059bbff");   // theo ID
-    $(".book").css("border", "1px solid orange");        // theo class
-    $(".price").css("color","violet")                 // theo price
-    $("h3").css("color", "green");                   // theo thẻ
-    console.log("Số cuốn sách:", $(".book").length); // đếm phần tử
+  let target = 300;
+
+    $("#btn-move").on("click", function () {
+    let $box = $("#box");
+    let current = parseFloat($box.css("left")) || 0; // đọc vị trí hiện tại
+
+    if (current >= target) {
+        $box.css({ left: "0px", opacity: 1 });
+        current = 0;
+    } // kiểm tra đến đích chưa
+
+    $box.stop(false, false).animate(
+        { left: target + "px", opacity: 0.5 },
+        3000 * (target - current) / target); }); // tiếp tục hiệu ứng
+
+    $("#btn-grow").on("click", function () {
+    $("#box")
+        .animate({ width: "160px", height: "160px" }, 300)
+        .delay(300)
+        .animate({ width: "100px", height: "100px" }, 300);
+    });
+    $("#btn-stop").on("click", function () {
+    $("#box").stop(false, false);
+    });
   </script>
 </body>
 </html>
