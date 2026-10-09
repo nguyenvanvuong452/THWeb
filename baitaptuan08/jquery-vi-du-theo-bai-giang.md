@@ -115,7 +115,7 @@ console.log("Số cuốn sách:", $(".book").length); // đếm phần tử
 
 **JS:**
 ```javascript
-$(".book:first").css("background", "#fadbd8");              // đầu tiên
+$(".book:first").css("background", "#c059bbff");              // đầu tiên
 $(".book:last").css("background", "#d5f5e3");               // cuối cùng
 $(".book:eq(1)").css("background", "#fcf3cf");              // vị trí số 1 (đếm từ 0)
 $(".book:even").css("font-style", "italic");                // vị trí chẵn (0,2,..)
