@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <input id ="txt" type="text" placeholder="Nhap vao">
+    <button id = btnClick>Click</button>
+    <p id = result></p>
+    <script>
+        $('#btnClick').on("click",()=>{
+            var regex = $("#txt").val()
+            var pattern = /^\d{2}\/\d{2}\/\d{4}$/
+            if (pattern.test(regex)){
+               $("#result").text("Dung")}
+            else {
+                $("#result").text("Sai")}
+        })
+    </script>
+</body>
+
+</html>
